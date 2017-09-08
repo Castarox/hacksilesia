@@ -19,8 +19,10 @@ public class TrackController {
     @PostMapping("/track/new")
     @ResponseBody
     Track addTrack(@ModelAttribute("form") @Valid TrackForm trackForm, BindingResult result){
-        if(trackService.isCorrectForm(result.)){
-            return trackService.createTrack();
+        if(trackService.isCorrectForm(result)){
+            Track track = trackService.createTrack(trackForm);
+            track.setLink(trackService.generateLink(track));
+            return track;
         }
         return null;
     }
