@@ -59,3 +59,7 @@ footer {
     }
     .row.content {height:auto;}
 }
+
+img {
+    width: 100px;
+}

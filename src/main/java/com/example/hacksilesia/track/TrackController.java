@@ -27,6 +27,11 @@ public class TrackController {
         return "form";
     }
 
+    @GetMapping("/passenger/new")
+    String form_passenger() {
+        return "form-passenger";
+    }
+
 
     @PostMapping("/track/new")
     @ResponseBody
