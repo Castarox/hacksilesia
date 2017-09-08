@@ -19,10 +19,18 @@ public class Track {
     private String telephone;
     private String time;
     private String other;
-    private String linkId;
+    private String link;
 
 
     Track(){}
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
 
     public Track(String name,
                  Double start_latitude,
@@ -32,8 +40,7 @@ public class Track {
                  Integer space,
                  String telephone,
                  String time,
-                 String other,
-                 String linkId) {
+                 String other) {
         this.name = name;
         this.start_latitude = start_latitude;
         this.start_longitude = start_longitude;
@@ -43,7 +50,6 @@ public class Track {
         this.telephone = telephone;
         this.time = time;
         this.other = other;
-        this.linkId = linkId;
     }
 
     public Long getId() {
