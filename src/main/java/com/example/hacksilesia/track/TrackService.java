@@ -25,7 +25,7 @@ public class TrackService {
         String telephone = trackForm.getTelephone();
         String time = trackForm.getTime();
         String other = trackForm.getOther();
-        return new Track(
+        return trackRepository.save(new Track(
                 name,
                 start_latitude,
                 start_longitude,
@@ -34,9 +34,16 @@ public class TrackService {
                 space,
                 telephone,
                 time,
-                other);
+                other));
     }
 
 
+    public String generateLink(Track track) {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(track.getId());
+        stringBuilder.append(track.getName().charAt(0));
+        stringBuilder.append(track.getSpace());
+        return stringBuilder.toString();
 
+    }
 }
