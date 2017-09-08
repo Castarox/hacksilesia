@@ -22,6 +22,11 @@ public class TrackController {
         return "index";
     }
 
+    @GetMapping("track/new")
+    String form() {
+        return "form";
+    }
+
 
     @PostMapping("/track/new")
     @ResponseBody
