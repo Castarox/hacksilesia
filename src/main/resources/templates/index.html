@@ -5,6 +5,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link th:href="@{~/css/index_css.css}" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
@@ -22,25 +23,28 @@
                     <div class="card">
                         <div class="card-block main-block">
                             <h2 class="card-title">Kierowca</h2>
-                        </div>
+                            <img th:src="@{~/img/sports-car.svg}"/>
+                        <hr/>
                         <p class="card-text">Dupa</p>
-
-
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <div class="card-block main-block">
-                    <h2 class="card-title">Pasażer</h2>
+                    <div class="card">
+                        <div class="card-block main-block">
+                            <h2 class="card-title">Pasażer</h2>
+                            <img th:src="@{~/img/man-user.svg}"/>
+                            <hr/>
+                            <p class="card-text">Dupa</p>
+                        </div>
                     </div>
-                    <p class="card-text">Dupa</p>
-
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-    <footer class="container-fluid text-center" th:replace="fragments/footer :: footer"></footer>
+<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+    <footer th:replace="fragments/footer :: footer"></footer>
 <script th:src="@{~/webjars/jquery/1.9.1/jquery.min.js}" src="webjars/jquery/1.9.1/jquery.min.js"></script>
 <script th:src="@{~/webjars/bootstrap/3.3.6/js/bootstrap.min.js}" src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
