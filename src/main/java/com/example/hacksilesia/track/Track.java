@@ -22,14 +22,7 @@ public class Track {
     private String link;
 
 
-    Track(){}
-
-    public String getLink() {
-        return link;
-    }
-
-    public void setLink(String link) {
-        this.link = link;
+    Track() {
     }
 
     public Track(String name,
@@ -54,6 +47,14 @@ public class Track {
 
     public Long getId() {
         return id;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 
     public void setId(Long id) {
