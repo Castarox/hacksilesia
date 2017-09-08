@@ -3,7 +3,24 @@
     border-radius: 0;
 }
 
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: #E33054;
+    text-decoration: none;
+}
+
 .row.content {height: 450px}
+
+.site-content {
+    margin-top: 52px;
+}
+
+img {
+    width: 100px;
+}
 
 .sidenav {
     padding-top: 20px;
@@ -19,7 +36,12 @@
 }
 
 .card-title {
+    text-align: center;
     padding-top: 10px;
+}
+
+.card-text {
+    text-align: center;
 }
 
 footer {
@@ -40,4 +62,8 @@ footer {
         padding: 15px;
     }
     .row.content {height:auto;}
+}
+
+img {
+    width: 100px;
 }
