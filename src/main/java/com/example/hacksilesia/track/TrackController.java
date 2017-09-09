@@ -19,12 +19,7 @@ public class TrackController {
     @Autowired
     private TrackService trackService;
 
-    @GetMapping("")
-    String index() {
-        return "index";
-    }
-
-    @GetMapping("/track/new")
+    @GetMapping("/form")
     String form() {
         return "form";
     }

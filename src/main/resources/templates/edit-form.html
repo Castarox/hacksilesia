@@ -11,23 +11,25 @@
 <nav th:replace="fragments/navbar :: navbar"></nav>
 <div class="site-content container-fluid text-center">
     <div class="row content">
-        <div class="col-sm-8 col-sm-offset-2">
-            <form class="form">
+        <div class="col-sm-6 col-sm-offset-3">
+            <h2>Edytuj dane przejazdu</h2>
+            <hr/>
+            <form class="form" th:object="${track}">
                 <div class="form-group">
                     <label for="name">Imię</label>
-                    <input type="text" class="form-control" id="name" placeholder=""/>
+                    <input type="text" class="form-control" id="name" name="name" th:value="${track.getName()}"/>
                 </div>
                 <div class="form-group">
                     <label for="start">Punkt początkowy</label>
-                    <input type="text" class="form-control" id="start" placeholder="Enter start point"/>
+                    <input type="text" class="form-control" id="start" name="start"/>
                 </div>
                 <div class="form-group">
                     <label for="end">Punkt końcowy</label>
-                    <input type="text" class="form-control" id="end" placeholder="Enter end point"/>
+                    <input type="text" class="form-control" id="end" name="end"/>
                 </div>
                 <div class="form-group">
                     <label for="select">Ilość miejsc w samochodzie</label>
-                    <select class="form-control" id="select">
+                    <select class="form-control" id="select" name="select">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -35,15 +37,15 @@
                 </div>
                 <div class="form-group">
                     <label for="contact">Kontakt</label>
-                    <input type="text" class="form-control" id="contact" placeholder=""/>
+                    <input type="text" class="form-control" id="contact" name="contact" th:value="${track.getTelephone()}"/>
                 </div>
                 <div class="form-group">
                     <label for="time">Godzina odjazdu</label>
-                    <input type="text" class="form-control" id="time" placeholder=""/>
+                    <input type="text" class="form-control" id="time" name="time" th:value="${track.getTime()}"/>
                 </div>
                 <div class="form-group">
                     <label for="others">Dodatkowe informacje</label>
-                    <textarea class="form-control" id="others" rows="3"></textarea>
+                    <textarea class="form-control" id="others" rows="3" th:value="${track.getOther()}"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

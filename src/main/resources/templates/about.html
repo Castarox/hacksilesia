@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>CarTogether</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link th:href="@{~/webjars/bootstrap/3.3.6/css/bootstrap.min.css}" href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+    <link th:href="@{~/css/index_css.css}" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<nav th:replace="fragments/navbar :: navbar"></nav>
+
+
+<div class="container text-center">
+        <div class="col-sm-8 col-sm-offset-2 text-left">
+            <hr/>
+            <div class="row">
+                <div class="content text-center">
+                    <h2>CarTogether</h2>
+                    <h3> Ale w czym problem?</h3>
+                    <p>
+                        O smogu słyszał każdy. W <a href="https://www.nik.gov.pl/plik/id,7764,vp,9732.pdf"> raporcie z kontroli jakości powietrza w Polsce</a>, opublikowanym przez Najwyższą Izbę Kontroli, zwrócono uwagę, że w 2011r. w Warszawie emisja liniowa (samochody) odpowiada za 63% stężenie PM10. W 2015 roku w Krakowie, było to 30%.
+                    </p>
+                    <h3>Jak to rozwiązać?</h3>
+                    <p>
+                        ?????????
+
+                    </p>
+
+
+                    <div id="logo">
+                        <img class="panda" th:src="@{~/img/japanda.png}"/>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+</div>
+<footer th:replace="fragments/footer :: footer"></footer>
+<script th:src="@{~/webjars/jquery/1.9.1/jquery.min.js}" src="webjars/jquery/1.9.1/jquery.min.js"></script>
+<script th:src="@{~/webjars/bootstrap/3.3.6/js/bootstrap.min.js}" src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
