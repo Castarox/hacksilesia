@@ -13,12 +13,13 @@ public class TrackService {
     @Autowired
     private TrackRepository trackRepository;
 
-    public List<Track> getTrackByDystance(double latitude, double longitude, float distance) {
-        double maxLatitude = latitude + distance;
-        double minLatitude = latitude - distance;
-        double maxLongitude = longitude + distance;
-        double minLongitude = longitude - distance;
-        return null;
+    public List<Track> getTrackByDystance(double lat, double lng, float distance) {
+        return trackRepository.findAll();
+//        double maxLatitude = latitude + distance;
+//        double minLatitude = latitude - distance;
+//        double maxLongitude = longitude + distance;
+//        double minLongitude = longitude - distance;
+//        return trackRepository.findByStartLatitudeLessThanEqualAndStartLatitudeIsGreaterThanEqualAndStartLongitudeIsLessThanEqualAndStartLongitudeGreaterThanEqual(maxLatitude, minLatitude, maxLongitude, minLongitude);
     }
 
     public boolean isCorrectForm(Errors errors) {
