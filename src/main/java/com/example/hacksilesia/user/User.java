@@ -1,6 +1,5 @@
 package com.example.hacksilesia.user;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import javax.persistence.*;
