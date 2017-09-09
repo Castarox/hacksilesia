@@ -1,6 +1,39 @@
 $(document).ready(function () {
-   $("#submit").click(function()  {
-       $('.form').preventDefault();
+
+   $("#add-form").change(function () {
+       var name = $('#name').val();
+       var select = $('#select').val();
+       var contact = $('#contact').val();
+       var time = $('#time').val();
+       var others = $('#others').val();
+       if (name.length >= 3){
+           if (contact.length >= 9){
+               if($('#start').length > 0){
+                   if ($('#end').length > 0){
+                       $('#submit').attr("disabled", false);
+                   }else {
+                       $('#submit').attr("disabled", true);
+                   }
+               }else {
+                   $('#submit').attr("disabled", true);
+
+               }
+           }else {
+               $('#submit').attr("disabled", true);
+           }
+       }else {
+           $('#submit').attr("disabled", true);
+       }
+   });
+
+   $('#back').click(function (e) {
+       e.preventDefault();
+       window.location.href ="/tracks";
+       return (false);
+   });
+
+   $("#add-form").submit(function(e)  {
+       e.preventDefault();
        var name = $('#name').val();
        var select = $('#select').val();
        var contact = $('#contact').val();
@@ -10,6 +43,8 @@ $(document).ready(function () {
        var start_longitude = $('#start').data("longitude");
        var end_latitude = $('#end').data("latitude");
        var end_longitude = $('#end').data("longitude");
+       console.log(start_longitude);
+       console.log(start_latitude);
        $.ajax({
            url: '/track/new',
            type: 'post',
