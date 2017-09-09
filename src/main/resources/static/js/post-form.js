@@ -1,13 +1,7 @@
 $(document).ready(function () {
-    // $(window).keydown(function(event){
-    //     if(event.keyCode == 13) {
-    //         event.preventDefault();
-    //         return false;
-    //     }
-    // });
 
-   $("#submit").click(function()  {
-       // $('.form').preventDefault();
+   $(".form").submit(function(e)  {
+       e.preventDefault();
        var name = $('#name').val();
        var select = $('#select').val();
        var contact = $('#contact').val();
