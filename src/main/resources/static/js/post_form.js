@@ -57,7 +57,7 @@ $(document).ready(function () {
                alert("Trasa stworzona twój link to http://localhost:8080/track/" + data['link'])
            },
            error: function (e) {
-               alert("dupa")
+               alert("Nie udało się stworzyć trasy. Spróbuj jeszcze raz!")
            }
        });
    })

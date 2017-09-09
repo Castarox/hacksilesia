@@ -30,7 +30,7 @@ $(document).ready(function () {
                 window.refresh();
             },
             error: function (e) {
-                alert("dupa")
+                alert("Nie udało się edytować. Spróbuj ponownie!")
             }
         });
     });
