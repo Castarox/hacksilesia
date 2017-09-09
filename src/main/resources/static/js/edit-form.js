@@ -11,6 +11,7 @@ $(document).ready(function () {
             type: 'get',
 
             success: function (data) {
+                console.log(data);
                 $('#start').val(data.results[1].formatted_address)
             },
             error: function (e) {
@@ -23,6 +24,7 @@ $(document).ready(function () {
         var end_lati = $('#end').data("latitude");
         var end_long = $('#end').data("longitude");
         var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+ end_lati + "," + end_long + "&key=AIzaSyClhLo7xcQp1G13D7VSR65oekjtwj1Llsc";
+        console.log(data);
         $.ajax({
             url: url,
             type: 'get',
