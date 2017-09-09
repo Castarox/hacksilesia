@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class UserController {
+
     @Autowired
     private UserService userService;
 
@@ -19,5 +20,8 @@ public class UserController {
 
     @GetMapping("/project")
     String project() { return "project"; }
+
+    @GetMapping("/tracks")
+    String tracks() { return "tracks"; }
 
 }

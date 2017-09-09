@@ -11,7 +11,6 @@
 <body>
 <nav th:replace="fragments/navbar :: navbar"></nav>
 
-
 <div class="container-fluid text-center">
     <div class="row content">
         <div class="col-sm-8 col-sm-offset-2 text-left">
@@ -19,13 +18,13 @@
                 <div class="card card-outline-primary mb-3 text-center  col-sm-offset-1 col-sm-9">
                     <div class="card-block" id="special-card">
                         <p>Dodaj nową trasę!</p>
-                        <a href="#" class="btn btn-default" data-toggle="modal" data-target="#addUserStory"><span class="glyphicon glyphicon-plus"></span></a>
+                        <a th:href="@{/form}" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></a>
                     </div>
                 </div>
                 <div class="card card-outline-primary mb-2  col-sm-offset-1 col-sm-9" th:each="track: ${tracks}">
                     <div class="card w-200">
                         <div class="card-block">
-                            <h3 class="card-title" th:text="${track.get()}"></h3></a>
+                            <h3 class="card-title" th:text="${track.get()}"></h3>
                             <hr />
                             <p>OPIS PRZEJAZDU</p>
                         </div>

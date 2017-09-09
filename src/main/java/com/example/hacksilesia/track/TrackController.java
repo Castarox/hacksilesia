@@ -17,7 +17,7 @@ public class TrackController {
     @Autowired
     private TrackService trackService;
 
-    @GetMapping("/track/new")
+    @GetMapping("/form")
     String form() {
         return "form";
     }
