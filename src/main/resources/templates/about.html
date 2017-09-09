@@ -5,7 +5,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link th:href="@{~/webjars/bootstrap/3.3.6/css/bootstrap.min.css}" href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
-    <link th:href="@{~/css/index_css.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{~/css/index.css}" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
@@ -13,25 +13,20 @@
 
 
 <div class="container text-center">
+    <h2>Kim jesteśmy?</h2>
         <div class="col-sm-8 col-sm-offset-2 text-left">
+
             <hr/>
             <div class="row">
                 <div class="content text-center">
-                    <h2>CarTogether</h2>
-                    <h3> Ale w czym problem?</h3>
-                    <p>
-                        O smogu słyszał każdy. W <a href="https://www.nik.gov.pl/plik/id,7764,vp,9732.pdf"> raporcie z kontroli jakości powietrza w Polsce</a>, opublikowanym przez Najwyższą Izbę Kontroli, zwrócono uwagę, że w 2011r. w Warszawie emisja liniowa (samochody) odpowiada za 63% stężenie PM10. W 2015 roku w Krakowie, było to 30%.
-                    </p>
-                    <h3>Jak to rozwiązać?</h3>
-                    <p>
-                        ?????????
-
-                    </p>
-
-
-                    <div id="logo">
-                        <img class="panda" th:src="@{~/img/japanda.png}"/>
-                    </div>
+                <p class="text-justify">Jesteśmy przed wszystkim grupą znajomych. Głównie krzyczymy na siebie, wytykamy sobie błędy i chodzimy razem na piwo. Ale czasem uda nam się coś nawet zakodzić. Mamy dużo pomysłów i mało wątpliwości. Na szczęscie wciąż dokucza nam syndrom początkującego programisty: "Mogę wszystko i robię to zajebiście!".</p>
+                    <hr/>
+                    <p class="text-justify">Poznaliśmy się w szkole programowania Codecool. Niektórzy z nas zaczynali od zera, stawiając wszystko na jedną kartę. Inni już wcześniej ogarnęli, że to jest to. Bo programowanie jest fajne. Ale tylko, kiedy robimy to razem.</p>
+                    <hr/>
+                <div>
+                    <img class="logo" th:src="@{~/img/japanda.png}"/>
+                    <a th:href="@{https://codecool.pl/}"><img class="logo" th:src="@{~/img/codecool.png}"/></a>
+                </div>
 
 
                 </div>
