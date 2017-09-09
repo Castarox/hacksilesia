@@ -3,14 +3,10 @@ package com.example.hacksilesia.track;
 import com.example.hacksilesia.form.TrackForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.Errors;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.*;
 
 @RestController
 public class TrackRest {
@@ -41,5 +37,13 @@ public class TrackRest {
             return track;
         }
         return null;
+    }
+
+
+    @GetMapping("/passenger/start/{lat}/{lng}/{distance}")
+    List<Track> availableTracks(@PathVariable double lat,
+                                @PathVariable double lng,
+                                @PathVariable float distance) {
+        return trackService.getTrackByDystance(lat, lng, distance);
     }
 }
