@@ -68,7 +68,7 @@ $(document).ready(function () {
                 window.refresh();
             },
             error: function (e) {
-                alert("Coś poszło nie tak, spróbuj jeszcze raz")
+                alert("Nie udało się edytować trasy. Spróbuj ponownie.")
             }
         });
     });
@@ -90,7 +90,7 @@ $(document).ready(function () {
                 window.location.href ="/tracks";
             },
             error: function (e) {
-                alert("Coś poszło nie tak, spróbuj jeszcze raz")
+                alert("Nie udało się usunąć trasy. Spróbuj ponownie.")
             }
         });
     })
