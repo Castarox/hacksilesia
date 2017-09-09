@@ -14,32 +14,27 @@ a:hover {
 
 .row.content {
     height: 450px;
-    margin-top: 20px;
 }
 
-img {
+.icon {
     width: 100px;
 }
 
-img.panda {
-    width: 400px;
-}
-
-img.logo {
-    width: 400px;
-}
-
-.sidenav {
-    padding-top: 20px;
-    background-color: #f1f1f1;
-    height: 100%;
+.logo {
+    width: 200px;
 }
 
 .card-block {
+    box-shadow: 5px 5px 2px #888888;
     border-radius: 10px;
     background-color: #F5F5F5;
     padding: 10px;
     margin: 5px;
+}
+
+.form-card {
+    margin-top: 30px;
+    margin-bottom: 60px;
 }
 
 .card-title {
