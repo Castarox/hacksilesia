@@ -67,7 +67,7 @@ function setStartLatLon() {
                     '</div>'+
                     '<h1 id="firstHeading" class="firstHeading">' + time + '</h1>'+
                     '<div id="bodyContent">'+
-                    '<p><h3><b>JEDZIE DO :' + address + ' </b></h3>' +
+                    '<p><h3><b>JEDZIE DO :' + track['endCity'] + ' </b></h3>' +
                     '<a href=' + link + '>'+
                     'LINK DO OGŁOSZENIA</a> '+
                     '</div>'+
