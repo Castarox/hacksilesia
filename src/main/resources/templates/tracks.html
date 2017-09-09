@@ -27,6 +27,8 @@
                             <h3 class="card-title" th:text="${track.get()}"></h3>
                             <hr />
                             <p>OPIS PRZEJAZDU</p>
+                            <button class="btn btn-default" th:href="@{'/edit/' + track.getId()}">Edytuj</button>
+                            <button class="btn btn-default" th:href="@{'/remove/' + track.getId()">Usuń</button>
                         </div>
                     </div>
                 </div>
