@@ -16,8 +16,6 @@ public class UserController {
 
     @GetMapping("")
     String index() {
-//        User user = (User) modelMap.get("user");
-
         return "index";
     }
 
