@@ -12,7 +12,10 @@ a:hover {
     text-decoration: none;
 }
 
-.row.content {height: 450px}
+.row.content {
+    height: 450px;
+    margin-top: 50px;
+}
 
 .site-content {
     margin-top: 52px;
