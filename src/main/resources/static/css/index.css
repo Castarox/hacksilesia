@@ -12,14 +12,21 @@ a:hover {
     text-decoration: none;
 }
 
-.row.content {height: 450px}
-
-.site-content {
-    margin-top: 52px;
+.row.content {
+    height: 450px;
+    margin-top: 20px;
 }
 
 img {
     width: 100px;
+}
+
+img.panda {
+    width: 400px;
+}
+
+img.logo {
+    width: 400px;
 }
 
 .sidenav {
