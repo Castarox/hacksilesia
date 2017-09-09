@@ -1,6 +1,4 @@
 $(document).ready(function () {
-    // setTimeout(startSet, 3000);
-
     $('.form').submit(function(e)  {
         e.preventDefault();
         var name = $('#name').val();
@@ -12,7 +10,6 @@ $(document).ready(function () {
         var endCity = $('#end').val();
         var link = $('#name').data("link");
         var url = "/track/" + link;
-        alert(url);
         $.ajax({
             url: url,
             type: 'post',
