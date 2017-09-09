@@ -67,7 +67,7 @@ public class Track {
         return startCity;
     }
 
-    public void setStartLatitude(String startCity) {
+    public void setStartCity(String startCity) {
         this.startCity = startCity;
     }
 
