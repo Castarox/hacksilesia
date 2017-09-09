@@ -47,4 +47,27 @@ public class TrackService {
         return stringBuilder.toString();
 
     }
+
+    public Track editTrack(Track track, TrackForm trackForm){
+        track.setName(trackForm.getName());
+        track.setSpace(trackForm.getSpace());
+
+        track.setStart_latitude(trackForm.getStart_latitude());
+        track.setStart_longitude(trackForm.getStart_longitude());
+
+        track.setEnd_latitude(trackForm.getEnd_latitude());
+        track.setEnd_longitude(trackForm.getEnd_longitude());
+
+        track.setTelephone(trackForm.getTelephone());
+        track.setSpace(trackForm.getSpace());
+
+        track.setTime(trackForm.getTime());
+        track.setOther(trackForm.getOther());
+        return this.save(track);
+
+    }
+
+    public Track save(Track track) {
+       return trackRepository.save(track);
+    }
 }

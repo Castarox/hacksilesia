@@ -1,6 +1,6 @@
 $(document).ready(function () {
    $("#submit").click(function()  {
-       alert("tutaj");
+       $('.form').preventDefault();
        var name = $('#name').val();
        var select = $('#select').val();
        var contact = $('#contact').val();

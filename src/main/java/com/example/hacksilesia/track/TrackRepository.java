@@ -5,4 +5,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TrackRepository extends CrudRepository<Track, Long> {
+
+    Track findByLink(String link);
+    Track findById(Long id);
 }
