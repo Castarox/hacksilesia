@@ -1,7 +1,7 @@
 $(document).ready(function () {
     // setTimeout(startSet, 3000);
 
-    $('.form').click(function(e)  {
+    $('.form').submit(function(e)  {
         e.preventDefault();
         var name = $('#name').val();
         var select = $('#select').val();
