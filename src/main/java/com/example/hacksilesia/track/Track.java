@@ -11,10 +11,10 @@ public class Track {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    private Double start_latitude;
-    private Double start_longitude;
-    private Double end_latitude;
-    private Double end_longitude;
+    private Double startLatitude;
+    private Double startLongitude;
+    private Double endLatitude;
+    private Double endLongitude;
     private Integer space;
     private String telephone;
     private String time;
@@ -26,19 +26,19 @@ public class Track {
     }
 
     public Track(String name,
-                 Double start_latitude,
-                 Double start_longitude,
-                 Double end_latitude,
-                 Double end_longitude,
+                 Double startLatitude,
+                 Double startLongitude,
+                 Double endLatitude,
+                 Double endLongitude,
                  Integer space,
                  String telephone,
                  String time,
                  String other) {
         this.name = name;
-        this.start_latitude = start_latitude;
-        this.start_longitude = start_longitude;
-        this.end_latitude = end_latitude;
-        this.end_longitude = end_longitude;
+        this.startLatitude = startLatitude;
+        this.startLongitude = startLongitude;
+        this.endLatitude = endLatitude;
+        this.endLongitude = endLongitude;
         this.space = space;
         this.telephone = telephone;
         this.time = time;
@@ -69,36 +69,36 @@ public class Track {
         this.name = name;
     }
 
-    public Double getStart_latitude() {
-        return start_latitude;
+    public Double getStartLatitude() {
+        return startLatitude;
     }
 
-    public void setStart_latitude(Double start_latitude) {
-        this.start_latitude = start_latitude;
+    public void setStartLatitude(Double startLatitude) {
+        this.startLatitude = startLatitude;
     }
 
-    public Double getStart_longitude() {
-        return start_longitude;
+    public Double getStartLongitude() {
+        return startLongitude;
     }
 
-    public void setStart_longitude(Double start_longitude) {
-        this.start_longitude = start_longitude;
+    public void setStartLongitude(Double startLongitude) {
+        this.startLongitude = startLongitude;
     }
 
-    public Double getEnd_latitude() {
-        return end_latitude;
+    public Double getEndLatitude() {
+        return endLatitude;
     }
 
-    public void setEnd_latitude(Double end_latitude) {
-        this.end_latitude = end_latitude;
+    public void setEndLatitude(Double endLatitude) {
+        this.endLatitude = endLatitude;
     }
 
-    public Double getEnd_longitude() {
-        return end_longitude;
+    public Double getEndLongitude() {
+        return endLongitude;
     }
 
-    public void setEnd_longitude(Double end_longitude) {
-        this.end_longitude = end_longitude;
+    public void setEndLongitude(Double endLongitude) {
+        this.endLongitude = endLongitude;
     }
 
     public Integer getSpace() {
