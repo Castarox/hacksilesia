@@ -28,6 +28,7 @@ function initAutocomplete() {
     );
     autocomplete_start.addListener('place_changed', setStartLatLon);
     autocomplete_end.addListener('place_changed', setEndLatLon);
+    console.log(autocomplete_start)
 }
 
 

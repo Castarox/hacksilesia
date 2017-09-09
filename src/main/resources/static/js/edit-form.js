@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    // setTimeout(startSet, 3000);
+
     $("#submit").click(function()  {
         $('.form').preventDefault();
         var name = $('#name').val();
