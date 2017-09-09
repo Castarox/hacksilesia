@@ -18,7 +18,7 @@ public class TrackService {
         double minLatitude = latitude - distance;
         double maxLongitude = longitude + distance;
         double minLongitude = longitude - distance;
-        return trackRepository.findByStartLatitudeLessThanEqualAndStartLatitudeIsGreaterThanEqualAndStartLongitudeIsLessThanEqualAndStartLongitudeGreaterThanEqual(maxLatitude, minLatitude, maxLongitude, minLongitude);
+        return null;
     }
 
     public boolean isCorrectForm(Errors errors) {

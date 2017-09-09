@@ -10,8 +10,4 @@ public interface TrackRepository extends CrudRepository<Track, Long> {
 
     Track findByLink(String link);
     Track findById(Long id);
-    List<Track> findByStartLatitudeLessThanEqualAndStartLatitudeIsGreaterThanEqualAndStartLongitudeIsLessThanEqualAndStartLongitudeGreaterThanEqual(double maxLatitude,
-                                                                                                                                                    double minLatitude,
-                                                                                                                                                    double maxLongitude,
-                                                                                                                                                    double minLongitude);
 }
