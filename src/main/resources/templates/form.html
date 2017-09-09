@@ -41,17 +41,17 @@
             </div>
             <div class="form-group">
                 <label for="contact">Kontakt</label>
-                <input type="text" class="form-control" id="contact" placeholder=""/>
+                <input type="number" class="form-control" id="contact" placeholder=""/>
             </div>
             <div class="form-group">
                 <label for="time">Godzina odjazdu</label>
-                <input type="text" class="form-control" id="time" placeholder=""/>
+                <input type="time" class="form-control" id="time" placeholder=""/>
             </div>
             <div class="form-group">
                 <label for="others">Dodatkowe informacje</label>
                 <textarea class="form-control" id="others" rows="3"></textarea>
             </div>
-            <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+            <button id="submit" type="submit" class="btn btn-primary" disabled="disabled">Submit</button>
         </form>
         </div>
     </div>
@@ -61,8 +61,8 @@
 <script th:src="@{~/webjars/jquery/1.9.1/jquery.min.js}" src="webjars/jquery/1.9.1/jquery.min.js"></script>
 <script th:src="@{~/webjars/bootstrap/3.3.6/js/bootstrap.min.js}" src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script th:src="@{~/js/form.js}" src=""></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClhLo7xcQp1G13D7VSR65oekjtwj1Llsc&amp;libraries=places&amp;callback=initAutocomplete" async="async" defer="defer"></script>
 <script th:src="@{~/js/post-form.js}" src=""></script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClhLo7xcQp1G13D7VSR65oekjtwj1Llsc&amp;libraries=places&amp;callback=initAutocomplete" async="async" defer="defer"></script>
 </body>
 </html>

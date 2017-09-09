@@ -1,5 +1,28 @@
 $(document).ready(function () {
 
+   $(".form").change(function () {
+       alert("Test");
+       var name = $('#name').val();
+       var select = $('#select').val();
+       var contact = $('#contact').val();
+       var time = $('#time').val();
+       var others = $('#others').val();
+       var start_latitude = $('#start').data("latitude");
+       var start_longitude = $('#start').data("longitude");
+       var end_latitude = $('#end').data("latitude");
+       var end_longitude = $('#end').data("longitude");
+
+       if (name.length >= 3){
+           if (contact.length >= 9){
+               if($('#start').length > 0){
+                   if ($('#end').length > 0){
+                       $('#submit').attr("disabled", false);
+                   }
+               }
+           }
+       }
+   });
+
    $(".form").submit(function(e)  {
        e.preventDefault();
        var name = $('#name').val();
