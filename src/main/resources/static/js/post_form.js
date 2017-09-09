@@ -54,7 +54,7 @@ $(document).ready(function () {
                time:time,
                other:others}),
            success: function (data) {
-               alert("Trasa stworzona twój link to http://localhost:8080/track/" + data['link'])
+               alert("Trasa stworzona! Twój link z informacją to http://localhost:8080/track/" + data['link'])
            },
            error: function (e) {
                alert("Nie udało się stworzyć trasy. Spróbuj jeszcze raz!")
