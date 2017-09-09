@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    // setTimeout(startSet, 3000);
     $(window).load(startSet());
     $(window).load(endSet());
     function startSet() {
@@ -14,7 +13,7 @@ $(document).ready(function () {
                 $('#start').val(data.results[1].formatted_address)
             },
             error: function (e) {
-                alert("dupa")
+                console.log(e)
             }
         });
     }
@@ -31,7 +30,7 @@ $(document).ready(function () {
                 $('#end').val(data.results[1].formatted_address)
             },
             error: function (e) {
-                alert("dupa")
+                console.log(e)
             }
         });
     }
@@ -69,14 +68,13 @@ $(document).ready(function () {
                 window.refresh();
             },
             error: function (e) {
-                alert("dupa")
+                alert("Coś poszło nie tak, spróbuj jeszcze raz")
             }
         });
     });
 
     $("#remove").on('click', function (e) {
         e.preventDefault();
-        alert("jeste");
         var link = $('#name').data("link");
         $.ajax({
             url: "/track/remove",
@@ -88,11 +86,11 @@ $(document).ready(function () {
                 }),
 
             success: function (data) {
-                alert("Udało ci się usunąć");
+                alert("Udało ci się usunąć trasę");
                 window.location.href ="/tracks";
             },
             error: function (e) {
-                alert("dupa")
+                alert("Coś poszło nie tak, spróbuj jeszcze raz")
             }
         });
     })
