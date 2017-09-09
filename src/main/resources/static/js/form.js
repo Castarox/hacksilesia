@@ -37,6 +37,7 @@ function setStartLatLon() {
     var longitude = place.geometry.location.lng();
     document.getElementById('start').setAttribute('data-latitude',latitude);
     document.getElementById('start').setAttribute('data-longitude',longitude);
+    console.log( document.getElementById('start'))
 }
 
 function setEndLatLon() {
@@ -45,4 +46,5 @@ function setEndLatLon() {
     var longitude = place.geometry.location.lng();
     document.getElementById('end').setAttribute('data-latitude',latitude);
     document.getElementById('end').setAttribute('data-longitude',longitude);
+    console.log(document.getElementById('end'))
 }

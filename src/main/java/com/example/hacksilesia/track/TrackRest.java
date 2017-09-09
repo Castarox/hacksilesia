@@ -18,8 +18,6 @@ public class TrackRest {
 
     @PostMapping("/track/new")
     Track addTrack(@Valid @RequestBody TrackForm trackForm, Errors errors) {
-        System.out.println(trackForm.getName());
-
         if (trackService.isCorrectForm(errors)) {
             Track track = trackService.createTrack(trackForm);
             track.setLink(trackService.generateLink(track));
@@ -52,8 +50,8 @@ public class TrackRest {
 
 
     @GetMapping("/passenger/start/{lat}/{lng}/{distance}")
-    List<Track> availableTracks(@PathVariable double lat,
-                                @PathVariable double lng,
+    List<Track> availableTracks(@PathVariable String lat,
+                                @PathVariable String lng,
                                 @PathVariable float distance) {
         return trackService.getTrackByDystance(lat, lng, distance);
     }

@@ -36,8 +36,9 @@ $(document).ready(function () {
         });
     }
 
-    $("#submit").click(function()  {
-        $('.form').preventDefault();
+    $("#submit").click(function(e)  {
+        e.preventDefault();
+        alert("dupa");
         var name = $('#name').val();
         var select = $('#select').val();
         var contact = $('#contact').val();
@@ -66,7 +67,7 @@ $(document).ready(function () {
                 other:others}),
             success: function () {
                 alert("Udało ci się edytować");
-                window.refresh();
+                location.reload();
             },
             error: function (e) {
                 alert("dupa")

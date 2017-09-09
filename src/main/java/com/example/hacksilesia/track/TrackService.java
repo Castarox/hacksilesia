@@ -13,12 +13,12 @@ public class TrackService {
     @Autowired
     private TrackRepository trackRepository;
 
-    public List<Track> getTrackByDystance(double latitude, double longitude, float distance) {
-        double maxLatitude = latitude + distance;
-        double minLatitude = latitude - distance;
-        double maxLongitude = longitude + distance;
-        double minLongitude = longitude - distance;
-        return trackRepository.findByStartLatitudeLessThanEqualAndStartLatitudeIsGreaterThanEqualAndStartLongitudeIsLessThanEqualAndStartLongitudeGreaterThanEqual(maxLatitude, minLatitude, maxLongitude, minLongitude);
+    public List<Track> getTrackByDystance(String latitude, String longitude, float distance) {
+        double maxLatitude = Double.parseDouble(latitude) + distance;
+        double minLatitude = Double.parseDouble(latitude) - distance;
+        double maxLongitude = Double.parseDouble(longitude) + distance;
+        double minLongitude = Double.parseDouble(longitude) - distance;
+        return trackRepository.findByStartLatitudeLessThanEqualAndStartLatitudeIsGreaterThanEqualAndStartLongitudeIsLessThanEqualAndStartLongitudeGreaterThanEqual(String.valueOf(maxLatitude), String.valueOf(minLatitude), String.valueOf(maxLongitude), String.valueOf(minLongitude));
     }
 
     public boolean isCorrectForm(Errors errors) {
@@ -27,10 +27,10 @@ public class TrackService {
 
     public Track createTrack(TrackForm trackForm) {
         String name = trackForm.getName();
-        Double start_latitude = trackForm.getStart_latitude();
-        Double start_longitude = trackForm.getStart_longitude();
-        Double end_latitude = trackForm.getEnd_latitude();
-        Double end_longitude = trackForm.getStart_longitude();
+        String start_latitude = trackForm.getStart_latitude();
+        String start_longitude = trackForm.getStart_longitude();
+        String end_latitude = trackForm.getEnd_latitude();
+        String end_longitude = trackForm.getStart_longitude();
         Integer space = trackForm.getSpace();
         String telephone = trackForm.getTelephone();
         String time = trackForm.getTime();
@@ -81,6 +81,12 @@ public class TrackService {
     }
 
     public Track save(Track track) {
+        System.out.println("\n\n\n\n\nW save method");
+        System.out.println(track.getStartLongitude());
+        System.out.println(track.getStartLatitude());
+        System.out.println("End");
+        System.out.println(track.getEndLongitude());
+        System.out.println(track.getEndLatitude());
        return trackRepository.save(track);
     }
 }

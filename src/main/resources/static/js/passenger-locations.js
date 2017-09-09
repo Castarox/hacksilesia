@@ -21,7 +21,7 @@ function setStartLatLon() {
     var place = autocomplete_start.getPlace();
     var latitude = place.geometry.location.lat();
     var longitude = place.geometry.location.lng();
-    var distance = 1;
+    var distance = 10;
 
 
     var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
