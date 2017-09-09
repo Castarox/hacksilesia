@@ -13,7 +13,7 @@
 <div class="site-content container-fluid">
     <div class="row content">
         <div class="col-sm-6 col-sm-offset-3">
-            <form class="form" id="add-form" name="add-form" method="POST">
+            <form class="form" id="add-form" name="add-form">
 <div class="card-block form-card">
             <div class="form-group">
                 <label for="name">Imię i nazwisko</label>
@@ -60,8 +60,8 @@
 <footer th:replace="fragments/footer :: footer"></footer>
 <script th:src="@{~/webjars/jquery/1.9.1/jquery.min.js}" src="webjars/jquery/1.9.1/jquery.min.js"></script>
 <script th:src="@{~/webjars/bootstrap/3.3.6/js/bootstrap.min.js}" src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script th:src="@{~/js/form.js}" src=""></script>
-<script th:src="@{~/js/post-form.js}" src=""></script>
+<script th:src="@{/js/form.js}" src=""></script>
+<script th:src="@{/js/post_form.js}" src=""></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClhLo7xcQp1G13D7VSR65oekjtwj1Llsc&amp;libraries=places&amp;callback=initAutocomplete" async="async" defer="defer"></script>
 <script type="text/javascript" th:src="@{/js/form_validation.js}"></script>
