@@ -6,11 +6,6 @@ $(document).ready(function () {
        var contact = $('#contact').val();
        var time = $('#time').val();
        var others = $('#others').val();
-       var start_latitude = $('#start').data("latitude");
-       var start_longitude = $('#start').data("longitude");
-       var end_latitude = $('#end').data("latitude");
-       var end_longitude = $('#end').data("longitude");
-
        if (name.length >= 3){
            if (contact.length >= 9){
                if($('#start').length > 0){
@@ -35,7 +30,7 @@ $(document).ready(function () {
        e.preventDefault();
        window.location.href ="/tracks";
        return (false);
-   })
+   });
 
    $("#add-form").submit(function(e)  {
        e.preventDefault();
@@ -48,6 +43,8 @@ $(document).ready(function () {
        var start_longitude = $('#start').data("longitude");
        var end_latitude = $('#end').data("latitude");
        var end_longitude = $('#end').data("longitude");
+       console.log(start_longitude);
+       console.log(start_latitude);
        $.ajax({
            url: '/track/new',
            type: 'post',
