@@ -1,13 +1,10 @@
+var map;
 function initMap() {
-    var uluru = {lat: -25.363, lng: 131.044};
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
-        center: uluru
+    var poland_center = {lat: 52.151445, lng: 19.158053};
+    map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 8,
+        center: poland_center
     });
-    var marker = new google.maps.Marker({
-            position: uluru,
-            map: map
-        });
     var user_input = document.getElementById('start');
     autocomplete_start = new google.maps.places.Autocomplete(
         (user_input),
@@ -17,15 +14,44 @@ function initMap() {
         {'country': ['pl']}
     );
     autocomplete_start.addListener('place_changed', setStartLatLon);
-
-
-
     }
 
 function setStartLatLon() {
     var place = autocomplete_start.getPlace();
     var latitude = place.geometry.location.lat();
     var longitude = place.geometry.location.lng();
-    document.getElementById('start').setAttribute('data-latitude',latitude);
-    document.getElementById('start').setAttribute('data-longitude',longitude);
+    var distance = 5;
+
+    $.ajax({
+    url: '/passenger/start/' + latitude + '/' + longitude + '/' + distance,
+    type: 'get',
+    success: function (data) {
+        data.forEach(function (track) {
+            var track_position = {lat: track['startLatitude'], lng: track['startLongitude']};
+            new google.maps.Marker({
+            position: track_position,
+            map: map
+            });
+        });
+        var center = new google.maps.LatLng(latitude, longitude);
+        map.panTo(center);
+        smoothZoom(map, 16, map.getZoom());
+    },
+        error: function (e) {
+           console.log(e);
+        }
+    });
+}
+
+function smoothZoom (map, max, cnt) {
+    if (cnt >= max) {
+        return;
+    }
+    else {
+        z = google.maps.event.addListener(map, 'zoom_changed', function(event){
+            google.maps.event.removeListener(z);
+            smoothZoom(map, max, cnt + 1);
+        });
+        setTimeout(function(){map.setZoom(cnt)}, 150);
+    }
 }
