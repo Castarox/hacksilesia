@@ -31,6 +31,12 @@ $(document).ready(function () {
        }
    });
 
+   $('#back').click(function (e) {
+       e.preventDefault();
+       window.location.href ="/tracks";
+       return (false);
+   })
+
    $("#add-form").submit(function(e)  {
        e.preventDefault();
        var name = $('#name').val();
