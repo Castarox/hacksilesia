@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
+import java.util.Map;
 
 @RestController
 public class TrackRest {
@@ -41,5 +42,16 @@ public class TrackRest {
             return track;
         }
         return null;
+    }
+
+    @PostMapping("track/remove")
+    Boolean removeTrack(@RequestBody Map<String,String> link){
+        System.out.println(link.get("link"));
+        Track track = trackRepository.findByLink(link.get("link"));
+        if (track != null){
+            trackService.removeTrack(track);
+            return true;
+        }
+        return false;
     }
 }
