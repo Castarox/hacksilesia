@@ -7,13 +7,9 @@ public class TrackForm {
     @NotNull
     private String name;
     @NotNull
-    private Double start_latitude;
+    private String startCity;
     @NotNull
-    private Double start_longitude;
-    @NotNull
-    private Double end_latitude;
-    @NotNull
-    private Double end_longitude;
+    private String endCity;
     @NotNull
     private Integer space;
     @NotNull
@@ -30,36 +26,20 @@ public class TrackForm {
         this.name = name;
     }
 
-    public Double getStart_latitude() {
-        return start_latitude;
+    public String getStartCity() {
+        return startCity;
     }
 
-    public void setStart_latitude(Double start_latitude) {
-        this.start_latitude = start_latitude;
+    public void setStartCity(String startCity) {
+        this.startCity = startCity;
     }
 
-    public Double getStart_longitude() {
-        return start_longitude;
+    public String getEndCity() {
+        return endCity;
     }
 
-    public void setStart_longitude(Double start_longitude) {
-        this.start_longitude = start_longitude;
-    }
-
-    public Double getEnd_latitude() {
-        return end_latitude;
-    }
-
-    public void setEnd_latitude(Double end_latitude) {
-        this.end_latitude = end_latitude;
-    }
-
-    public Double getEnd_longitude() {
-        return end_longitude;
-    }
-
-    public void setEnd_longitude(Double end_longitude) {
-        this.end_longitude = end_longitude;
+    public void setEndCity(String endCity) {
+        this.endCity = endCity;
     }
 
     public Integer getSpace() {

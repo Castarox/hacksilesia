@@ -39,22 +39,16 @@ $(document).ready(function () {
        var contact = $('#contact').val();
        var time = $('#time').val();
        var others = $('#others').val();
-       var start_latitude = $('#start').data("latitude");
-       var start_longitude = $('#start').data("longitude");
-       var end_latitude = $('#end').data("latitude");
-       var end_longitude = $('#end').data("longitude");
-       console.log(start_longitude);
-       console.log(start_latitude);
+       var startCity = $('#start').val();
+       var endCity = $('#end').val();
        $.ajax({
            url: '/track/new',
            type: 'post',
            contentType: "application/json",
            dataType: 'json',
            data: JSON.stringify({name: name,
-               start_latitude: start_latitude,
-               start_longitude: start_longitude,
-               end_latitude: end_latitude,
-               end_longitude: end_longitude,
+               startCity: startCity,
+               endCity: endCity,
                space:select,
                telephone:contact,
                time:time,
