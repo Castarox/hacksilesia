@@ -15,8 +15,8 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("")
-    String index(Model model, ModelMap modelMap) {
-        User user = (User) modelMap.get("user");
+    String index() {
+//        User user = (User) modelMap.get("user");
 
         return "index";
     }
