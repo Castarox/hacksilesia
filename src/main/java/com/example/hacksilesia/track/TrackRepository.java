@@ -8,6 +8,7 @@ import java.util.*;
 @Repository
 public interface TrackRepository extends CrudRepository<Track, Long> {
 
+    List<Track> findAll();
     Track findByLink(String link);
     Track findById(Long id);
 }
