@@ -16,9 +16,18 @@ $(document).ready(function () {
                if($('#start').length > 0){
                    if ($('#end').length > 0){
                        $('#submit').attr("disabled", false);
+                   }else {
+                       $('#submit').attr("disabled", true);
                    }
+               }else {
+                   $('#submit').attr("disabled", true);
+
                }
+           }else {
+               $('#submit').attr("disabled", true);
            }
+       }else {
+           $('#submit').attr("disabled", true);
        }
    });
 
