@@ -3,14 +3,23 @@ package com.example.hacksilesia.track;
 import com.example.hacksilesia.form.TrackForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.validation.BindingResult;
 import org.springframework.validation.Errors;
+
+import java.util.*;
 
 @Service
 public class TrackService {
 
     @Autowired
     private TrackRepository trackRepository;
+
+    public List<Track> getTrackByDystance(double latitude, double longitude, float distance) {
+        double maxLatitude = latitude + distance;
+        double minLatitude = latitude - distance;
+        double maxLongitude = longitude + distance;
+        double minLongitude = longitude - distance;
+        return trackRepository.findByStartLatitudeLessThanEqualAndStartLatitudeIsGreaterThanEqualAndStartLongitudeIsLessThanEqualAndStartLongitudeGreaterThanEqual(maxLatitude, minLatitude, maxLongitude, minLongitude);
+    }
 
     public boolean isCorrectForm(Errors errors) {
         return !errors.hasErrors();
@@ -52,11 +61,11 @@ public class TrackService {
         track.setName(trackForm.getName());
         track.setSpace(trackForm.getSpace());
 
-        track.setStart_latitude(trackForm.getStart_latitude());
-        track.setStart_longitude(trackForm.getStart_longitude());
+        track.setStartLatitude(trackForm.getStart_latitude());
+        track.setStartLongitude(trackForm.getStart_longitude());
 
-        track.setEnd_latitude(trackForm.getEnd_latitude());
-        track.setEnd_longitude(trackForm.getEnd_longitude());
+        track.setEndLatitude(trackForm.getEnd_latitude());
+        track.setEndLongitude(trackForm.getEnd_longitude());
 
         track.setTelephone(trackForm.getTelephone());
         track.setSpace(trackForm.getSpace());
@@ -65,6 +74,10 @@ public class TrackService {
         track.setOther(trackForm.getOther());
         return this.save(track);
 
+    }
+
+    public void removeTrack(Track track){
+        trackRepository.delete(track);
     }
 
     public Track save(Track track) {

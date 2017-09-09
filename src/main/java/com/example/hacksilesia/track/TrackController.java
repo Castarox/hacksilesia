@@ -40,7 +40,7 @@ public class TrackController {
         return "form";
     }
 
-    @GetMapping("/passenger/new")
+    @GetMapping("/passenger")
     String form_passenger() {
         return "form-passenger";
     }

@@ -73,3 +73,9 @@ footer {
 img {
     width: 100px;
 }
+
+#map {
+    margin: auto;
+    height: 71vh;
+    width: 100%;
+}
