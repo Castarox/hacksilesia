@@ -1,8 +1,8 @@
 $(document).ready(function () {
     // setTimeout(startSet, 3000);
 
-    $("#submit").click(function()  {
-        $('.form').preventDefault();
+    $('.form').click(function(e)  {
+        e.preventDefault();
         var name = $('#name').val();
         var select = $('#select').val();
         var contact = $('#contact').val();
@@ -30,7 +30,7 @@ $(document).ready(function () {
                 window.refresh();
             },
             error: function (e) {
-                alert("dupa")
+                alert("Nie udało się edytować. Spróbuj ponownie!")
             }
         });
     });
