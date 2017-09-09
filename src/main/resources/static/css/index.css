@@ -16,19 +16,16 @@ a:hover {
     height: 450px;
 }
 
-img {
+.icon {
     width: 100px;
 }
 
-img.panda {
-    width: 400px;
-}
-
-img.logo {
-    width: 400px;
+.logo {
+    width: 200px;
 }
 
 .card-block {
+    box-shadow: 5px 5px 2px #888888;
     border-radius: 10px;
     background-color: #F5F5F5;
     padding: 10px;
@@ -36,6 +33,7 @@ img.logo {
 }
 
 .form-card {
+    margin-top: 30px;
     margin-bottom: 60px;
 }
 

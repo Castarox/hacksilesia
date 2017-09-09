@@ -13,21 +13,31 @@
 
 
 <div class="container text-center">
-    <div class="col-sm-8 col-sm-offset-2 text-left">
+    <div class="col-sm-8 col-sm-offset-2 text-center">
+    <h2>CarTogether</h2>
         <hr/>
-        <div class="row">
-            <div class="content text-center">
-                <h2></h2>
-                <p></p>
-                <div id="logo">
-                    <a th:href="@{https://codecool.pl/}"><img class="logo" th:src="@{~/img/codecool.png}"/></a>
-                </div>
+    <h3> Ale w czym problem?</h3>
+    <p class="text-justify">
+        O smogu słyszał każdy. W <a href="https://www.nik.gov.pl/plik/id,7764,vp,9732.pdf"> raporcie z kontroli jakości powietrza w Polsce</a>, opublikowanym przez Najwyższą Izbę Kontroli, zwrócono uwagę, że w 2011r. w Warszawie emisja liniowa (samochody) odpowiada za 63% stężenia PM10. W 2015 roku w Krakowie, było to 30%. Smog, który powodują samochody to nie tylko to, co leci z rur wydechowych. Pył samochodowy w mniej więcej 7 procentach to „dymienie z rury”. Kilkanaście procent to drobinki z opon i klocków hamulcowych. Reszta, czyli ok. 80 proc., to pylenie wtórne, czyli to, co leży na jezdni, a samochody wzbijają w powietrze przejeżdżając <a href="http://www.transport-publiczny.pl/wiadomosci/skad-sie-bierze-smog-i-jak-bardzo-winne-sa-auta-53970.html">[źródło]</a>
+    </p>
+        <hr/>
+    <h3>Jak to rozwiązać?</h3>
+        <p class="text-justify">
+            Jednym z postulatów środowisk antysmogowych jest współdzielenie samochodów podczas codziennych, powtarzających się podróży do pracy, szkoły itp. Dotychczas skomunikowanie się kierowców wymagało korzystania z wielu różnych kanałów, mediów społecznościowych. <a href="https://www.youtube.com/watch?v=Yw9epwL5eMo"> CarTogether</a> ma odpowiadać na potrzebę stworzenia jednego narzędzia, które to umożliwia.
+    </p>
+        <hr/>
+        <p class="text-justify">Wspólny przejazd = mniej smogu, mniejsze korki. Fajnie? Fajnie.</p>
+        <hr/>
+            <p class="text-justify">
+                Projekt jest opensource'owy, nie mamy sponsorów. Korzystamy z darmowych komponentów graficznych, dostępnych <a href="https://www.flaticon.com/">tutaj</a> .
+            </p>
+            <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+            <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
 
-            </div>
+
         </div>
     </div>
-</div>
 <footer th:replace="fragments/footer :: footer"></footer>
 <script th:src="@{~/webjars/jquery/1.9.1/jquery.min.js}" src="webjars/jquery/1.9.1/jquery.min.js"></script>
 <script th:src="@{~/webjars/bootstrap/3.3.6/js/bootstrap.min.js}" src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
