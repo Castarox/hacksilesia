@@ -23,6 +23,16 @@ function setStartLatLon() {
     var longitude = place.geometry.location.lng();
     var distance = 1;
 
+
+    var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+    var myMarker = new google.maps.Marker({
+        position: {lat: latitude, lng: longitude},
+        map: map,
+        animation: google.maps.Animation.DROP,
+        icon: image,
+        title: 'me'
+    });
+
     $.ajax({
     url: '/passenger/start/' + latitude + '/' + longitude + '/' + distance,
     type: 'get',
