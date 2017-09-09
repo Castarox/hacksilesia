@@ -25,9 +25,10 @@ public class TrackController {
         return "404";
     }
 
-    @GetMapping("track/{id}")
+    @GetMapping("track/single/{id}")
     String getById(@PathVariable Long id, Model model) {
         Track track = trackRepository.findById(id);
+        System.out.println(id);
         if (track != null) {
             model.addAttribute("track", track);
             return "track";
