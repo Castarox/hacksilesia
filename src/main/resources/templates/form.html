@@ -14,7 +14,7 @@
     <div class="row content">
         <div class="col-sm-6 col-sm-offset-3">
             <form class="form" id="add-form" name="add-form">
-<div class="card-block form-card">
+            <div class="card-block form-card">
             <div class="form-group">
                 <label for="name">Imię i nazwisko</label>
                 <input type="text" class="form-control" id="name" placeholder="Imię i nazwisko"/>
@@ -49,9 +49,10 @@
                 <label for="others">Dodatkowe informacje</label>
                 <textarea class="form-control" id="others" rows="3" name="others" placeholder="Inne informacje"></textarea>
             </div>
-            <button id="submit" type="submit" class="btn btn-primary" disabled="disabled">Submit</button>
-    <a th:href="@{~/tracks}"><button name="back" class="btn btn-default submit">Wróć</button></a>
-        </form>
+            <button id="submit" type="submit" class="btn btn-primary" disabled="disabled">Utwórz</button>
+            <a th:href="@{~/tracks}"><button name="back" class="btn btn-default submit">Wróć</button></a>
+            </div>
+            </form>
         </div>
         </div>
         </div>
@@ -61,7 +62,7 @@
 <script th:src="@{~/webjars/bootstrap/3.3.6/js/bootstrap.min.js}" src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script th:src="@{~/js/form.js}" src=""></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClhLo7xcQp1G13D7VSR65oekjtwj1Llsc&amp;libraries=places&amp;callback=initAutocomplete" async="async" defer="defer"></script>
-<script th:src="@{~/js/post-form.js}" src=""></script>
+<script th:src="@{~/js/post_form.js}" src=""></script>
 
 </body>
 </html>

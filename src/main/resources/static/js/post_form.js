@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
-   $(".form").change(function () {
-       alert("Test");
+   $("#add-form").change(function () {
        var name = $('#name').val();
        var select = $('#select').val();
        var contact = $('#contact').val();
@@ -23,7 +22,7 @@ $(document).ready(function () {
        }
    });
 
-   $(".form").submit(function(e)  {
+   $("#add-form").submit(function(e)  {
        e.preventDefault();
        var name = $('#name').val();
        var select = $('#select').val();
