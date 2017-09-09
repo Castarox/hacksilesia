@@ -76,6 +76,10 @@ public class TrackService {
 
     }
 
+    public void removeTrack(Track track){
+        trackRepository.delete(track);
+    }
+
     public Track save(Track track) {
        return trackRepository.save(track);
     }

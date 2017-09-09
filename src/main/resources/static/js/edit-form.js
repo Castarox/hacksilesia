@@ -11,7 +11,6 @@ $(document).ready(function () {
             type: 'get',
 
             success: function (data) {
-                console.log(data);
                 $('#start').val(data.results[1].formatted_address)
             },
             error: function (e) {
@@ -24,7 +23,6 @@ $(document).ready(function () {
         var end_lati = $('#end').data("latitude");
         var end_long = $('#end').data("longitude");
         var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+ end_lati + "," + end_long + "&key=AIzaSyClhLo7xcQp1G13D7VSR65oekjtwj1Llsc";
-        console.log(data);
         $.ajax({
             url: url,
             type: 'get',
@@ -66,9 +64,32 @@ $(document).ready(function () {
                 telephone:contact,
                 time:time,
                 other:others}),
-            success: function (data) {
+            success: function () {
                 alert("Udało ci się edytować");
                 window.refresh();
+            },
+            error: function (e) {
+                alert("dupa")
+            }
+        });
+    });
+
+    $("#remove").on('click', function (e) {
+        e.preventDefault();
+        alert("jeste");
+        var link = $('#name').data("link");
+        $.ajax({
+            url: "/track/remove",
+            type: 'post',
+            contentType: "application/json",
+            dataType: 'json',
+            data: JSON.stringify({
+                    link: link
+                }),
+
+            success: function (data) {
+                alert("Udało ci się usunąć");
+                window.location.href ="/tracks";
             },
             error: function (e) {
                 alert("dupa")
