@@ -14,7 +14,6 @@ a:hover {
 
 .row.content {
     height: 450px;
-    margin-top: 20px;
 }
 
 .icon {
@@ -25,18 +24,16 @@ a:hover {
     width: 200px;
 }
 
-.sidenav {
-    padding-top: 20px;
-    background-color: #f1f1f1;
-    height: 100%;
-}
-
 .card-block {
     box-shadow: 5px 5px 2px #888888;
     border-radius: 10px;
     background-color: #F5F5F5;
     padding: 10px;
     margin: 5px;
+}
+
+.form-card {
+    margin-bottom: 60px;
 }
 
 .card-title {
