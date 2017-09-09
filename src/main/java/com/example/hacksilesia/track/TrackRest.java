@@ -27,8 +27,8 @@ public class TrackRest {
         if (trackService.isCorrectForm(errors)) {
             Track track = trackService.createTrack(trackForm);
             track.setLink(trackService.generateLink(track));
-            trackService.save(track);
-            return track;
+            return trackService.save(track);
+
         }
         return null;
     }
