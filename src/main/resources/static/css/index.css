@@ -17,16 +17,12 @@ a:hover {
     margin-top: 20px;
 }
 
-img {
+.icon {
     width: 100px;
 }
 
-img.panda {
-    width: 400px;
-}
-
-img.logo {
-    width: 400px;
+.logo {
+    width: 200px;
 }
 
 .sidenav {

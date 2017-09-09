@@ -11,14 +11,10 @@
 <nav th:replace="fragments/navbar :: navbar"></nav>
 <div class="site-content container-fluid text-center">
     <div class="row content">
-        <div class="col-sm-8 col-sm-offset-2">
-        <form class="form" id="add-form" name="add-form" method="POST">
         <div class="col-sm-6 col-sm-offset-3">
             <h2>Wprowadź dane przejazdu</h2>
-
+            <form class="form" id="add-form" name="add-form" method="POST">
             <hr/>
-
-        <form class="form">
             <div class="form-group">
                 <label for="name">Imię i nazwisko</label>
                 <input type="text" class="form-control" id="name" placeholder=""/>
