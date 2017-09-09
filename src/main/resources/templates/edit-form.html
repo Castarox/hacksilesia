@@ -17,19 +17,19 @@
             <form class="form" th:object="${track}">
                 <div class="form-group">
                     <label for="name">Imię</label>
-                    <input type="text" class="form-control" id="name" name="name" th:value="${track.getName()}"/>
+                    <input th:attr="data-link=${track.getLink()}" type="text" class="form-control" id="name" name="name" th:value="${track.getName()}"/>
                 </div>
                 <div class="form-group">
                     <label for="start">Punkt początkowy</label>
-                    <input type="text" class="form-control" id="start" name="start"/>
+                    <input th:attr="data-latitude=${track.getStart_latitude()}, data-longitude=${track.getStart_longitude()} " type="text" class="form-control" id="start" name="start"/>
                 </div>
                 <div class="form-group">
                     <label for="end">Punkt końcowy</label>
-                    <input type="text" class="form-control" id="end" name="end"/>
+                    <input th:attr="data-latitude=${track.getEnd_latitude()}, data-longitude=${track.getEnd_longitude()}" type="text" class="form-control" id="end" name="end"/>
                 </div>
                 <div class="form-group">
                     <label for="select">Ilość miejsc w samochodzie</label>
-                    <select class="form-control" id="select" name="select">
+                    <select class="form-control" id="select" name="select" th:value="${track.getSpace()}">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -47,7 +47,7 @@
                     <label for="others">Dodatkowe informacje</label>
                     <textarea class="form-control" id="others" rows="3" th:value="${track.getOther()}"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button id="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
     </div>
@@ -56,5 +56,10 @@
 <footer th:replace="fragments/footer :: footer"></footer>
 <script th:src="@{~/webjars/jquery/1.9.1/jquery.min.js}" src="webjars/jquery/1.9.1/jquery.min.js"></script>
 <script th:src="@{~/webjars/bootstrap/3.3.6/js/bootstrap.min.js}" src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script th:src="@{~/js/edit-form.js}"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClhLo7xcQp1G13D7VSR65oekjtwj1Llsc&amp;libraries=places&amp;callback=initAutocomplete" async="async" defer="defer"></script>
+<script th:src="@{~/js/form.js}" src=""></script>
+
 </body>
 </html>
