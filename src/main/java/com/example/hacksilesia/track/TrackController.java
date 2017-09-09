@@ -22,9 +22,14 @@ public class TrackController {
         return "index";
     }
 
-    @GetMapping("track/new")
+    @GetMapping("/track/new")
     String form() {
         return "form";
+    }
+
+    @GetMapping("/passenger/new")
+    String form_passenger() {
+        return "form-passenger";
     }
 
 
