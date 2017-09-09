@@ -13,4 +13,11 @@ public class UserController {
     String index() {
         return "index";
     }
+
+    @GetMapping("/about")
+    String about() { return "about"; }
+
+    @GetMapping("/project")
+    String project() { return "project"; }
+
 }
