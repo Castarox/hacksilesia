@@ -1,39 +1,5 @@
 $(document).ready(function () {
-    $(window).load(startSet());
-    $(window).load(endSet());
-    function startSet() {
-        var start_lati = $('#start').data("latitude");
-        var start_long = $('#start').data("longitude");
-        var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+ start_lati + "," + start_long + "&key=AIzaSyClhLo7xcQp1G13D7VSR65oekjtwj1Llsc";
-        $.ajax({
-            url: url,
-            type: 'get',
-
-            success: function (data) {
-                $('#start').val(data.results[1].formatted_address)
-            },
-            error: function (e) {
-                console.log(e)
-            }
-        });
-    }
-
-    function endSet() {
-        var end_lati = $('#end').data("latitude");
-        var end_long = $('#end').data("longitude");
-        var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+ end_lati + "," + end_long + "&key=AIzaSyClhLo7xcQp1G13D7VSR65oekjtwj1Llsc";
-        $.ajax({
-            url: url,
-            type: 'get',
-
-            success: function (data) {
-                $('#end').val(data.results[1].formatted_address)
-            },
-            error: function (e) {
-                console.log(e)
-            }
-        });
-    }
+    // setTimeout(startSet, 3000);
 
     $("#submit").click(function()  {
         $('.form').preventDefault();
@@ -64,13 +30,14 @@ $(document).ready(function () {
                 window.refresh();
             },
             error: function (e) {
-                alert("Nie udało się edytować trasy. Spróbuj ponownie.")
+                alert("Nie udało się edytować. Spróbuj ponownie!")
             }
         });
     });
 
     $("#remove").on('click', function (e) {
         e.preventDefault();
+        alert("jeste");
         var link = $('#name').data("link");
         $.ajax({
             url: "/track/remove",
@@ -82,7 +49,7 @@ $(document).ready(function () {
                 }),
 
             success: function (data) {
-                alert("Udało ci się usunąć trasę");
+                alert("Udało ci się usunąć");
                 window.location.href ="/tracks";
             },
             error: function (e) {
