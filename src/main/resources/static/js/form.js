@@ -26,6 +26,23 @@ function initAutocomplete() {
     autocomplete_end.setComponentRestrictions(
         {'country': ['pl']}
     );
-    autocomplete_start.addListener('place_changed');
-    autocomplete_end.addListener('place_changed');
+    autocomplete_start.addListener('place_changed', setStartLatLon);
+    autocomplete_end.addListener('place_changed', setEndLatLon);
+}
+
+
+function setStartLatLon() {
+    var place = autocomplete_start.getPlace();
+    var latitude = place.geometry.location.lat();
+    var longitude = place.geometry.location.lng();
+    document.getElementById('start').setAttribute('data-latitude',latitude);
+    document.getElementById('start').setAttribute('data-longitude',longitude);
+}
+
+function setEndLatLon() {
+    var place = autocomplete_end.getPlace();
+    var latitude = place.geometry.location.lat();
+    var longitude = place.geometry.location.lng();
+    document.getElementById('end').setAttribute('data-latitude',latitude);
+    document.getElementById('end').setAttribute('data-longitude',longitude);
 }
