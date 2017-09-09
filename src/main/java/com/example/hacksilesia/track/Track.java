@@ -11,10 +11,10 @@ public class Track {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    private Double startLatitude;
-    private Double startLongitude;
-    private Double endLatitude;
-    private Double endLongitude;
+    private String startLatitude;
+    private String startLongitude;
+    private String endLatitude;
+    private String endLongitude;
     private Integer space;
     private String telephone;
     private String time;
@@ -26,10 +26,10 @@ public class Track {
     }
 
     public Track(String name,
-                 Double startLatitude,
-                 Double startLongitude,
-                 Double endLatitude,
-                 Double endLongitude,
+                 String startLatitude,
+                 String startLongitude,
+                 String endLatitude,
+                 String endLongitude,
                  Integer space,
                  String telephone,
                  String time,
@@ -69,35 +69,35 @@ public class Track {
         this.name = name;
     }
 
-    public Double getStartLatitude() {
+    public String getStartLatitude() {
         return startLatitude;
     }
 
-    public void setStartLatitude(Double startLatitude) {
+    public void setStartLatitude(String startLatitude) {
         this.startLatitude = startLatitude;
     }
 
-    public Double getStartLongitude() {
+    public String getStartLongitude() {
         return startLongitude;
     }
 
-    public void setStartLongitude(Double startLongitude) {
+    public void setStartLongitude(String startLongitude) {
         this.startLongitude = startLongitude;
     }
 
-    public Double getEndLatitude() {
+    public String getEndLatitude() {
         return endLatitude;
     }
 
-    public void setEndLatitude(Double endLatitude) {
+    public void setEndLatitude(String endLatitude) {
         this.endLatitude = endLatitude;
     }
 
-    public Double getEndLongitude() {
+    public String getEndLongitude() {
         return endLongitude;
     }
 
-    public void setEndLongitude(Double endLongitude) {
+    public void setEndLongitude(String endLongitude) {
         this.endLongitude = endLongitude;
     }
 
