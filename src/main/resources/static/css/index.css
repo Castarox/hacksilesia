@@ -24,6 +24,10 @@ a:hover {
     width: 200px;
 }
 
+.panda {
+    width: 700px;
+}
+
 .card-block {
     box-shadow: 5px 5px 2px #888888;
     border-radius: 10px;
