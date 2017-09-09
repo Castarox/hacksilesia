@@ -2,55 +2,40 @@
     margin-bottom: 0;
     border-radius: 0;
 }
-
 a {
     color: inherit;
 }
-
 a:hover {
     color: #E33054;
     text-decoration: none;
 }
-
 .row.content {
     height: 450px;
-    margin-top: 20px;
 }
-
-img {
+.icon {
     width: 100px;
 }
-
-img.panda {
-    width: 400px;
+.logo {
+    width: 200px;
 }
-
-img.logo {
-    width: 400px;
-}
-
-.sidenav {
-    padding-top: 20px;
-    background-color: #f1f1f1;
-    height: 100%;
-}
-
 .card-block {
+    box-shadow: 5px 5px 2px #888888;
     border-radius: 10px;
     background-color: #F5F5F5;
     padding: 10px;
     margin: 5px;
 }
-
+.form-card {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
 .card-title {
     text-align: center;
     padding-top: 10px;
 }
-
 .card-text {
     text-align: center;
 }
-
 footer {
     background-color: #555;
     color: white;
@@ -62,7 +47,6 @@ footer {
     padding: 1rem;
     text-align: center;
 }
-
 @media screen and (max-width: 767px) {
     .sidenav {
         height: auto;
@@ -70,7 +54,6 @@ footer {
     }
     .row.content {height:auto;}
 }
-
 img {
     width: 100px;
 }
