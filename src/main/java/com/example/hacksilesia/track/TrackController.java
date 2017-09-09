@@ -22,9 +22,19 @@ public class TrackController {
             model.addAttribute("track", track);
             return "edit-form";
         }
-        return null;
+        return "404";
     }
 
+    @GetMapping("track/{id}")
+    String getById(@PathVariable Long id, Model model) {
+        Track track = trackRepository.findById(id);
+        if (track != null) {
+            model.addAttribute("track", track);
+            return "track";
+        }
+        return "404";
+
+    }
 
     @GetMapping("/track/new")
     String form() {
