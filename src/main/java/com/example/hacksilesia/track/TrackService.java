@@ -4,6 +4,7 @@ import com.example.hacksilesia.form.TrackForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.Errors;
 
 @Service
 public class TrackService {
@@ -11,8 +12,8 @@ public class TrackService {
     @Autowired
     private TrackRepository trackRepository;
 
-    public boolean isCorrectForm(BindingResult result) {
-        return result.hasErrors();
+    public boolean isCorrectForm(Errors errors) {
+        return !errors.hasErrors();
     }
 
     public Track createTrack(TrackForm trackForm) {
