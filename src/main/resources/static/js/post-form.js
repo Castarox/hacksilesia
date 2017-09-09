@@ -1,6 +1,7 @@
 $(document).ready(function () {
-   $("#submit").click(function()  {
-       $('.form').preventDefault();
+
+   $(".form").submit(function(e)  {
+       e.preventDefault();
        var name = $('#name').val();
        var select = $('#select').val();
        var contact = $('#contact').val();
