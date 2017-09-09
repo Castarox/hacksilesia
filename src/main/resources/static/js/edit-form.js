@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    // setTimeout(startSet, 3000);
     $(window).load(startSet());
     $(window).load(endSet());
     function startSet() {
@@ -14,7 +13,6 @@ $(document).ready(function () {
                 $('#start').val(data.results[1].formatted_address)
             },
             error: function (e) {
-                alert("dupa")
             }
         });
     }
@@ -31,7 +29,6 @@ $(document).ready(function () {
                 $('#end').val(data.results[1].formatted_address)
             },
             error: function (e) {
-                alert("dupa")
             }
         });
     }
@@ -69,14 +66,13 @@ $(document).ready(function () {
                 window.refresh();
             },
             error: function (e) {
-                alert("dupa")
+                alert("Nie udało się edytować trasy. Spróbuj ponownie.")
             }
         });
     });
 
     $("#remove").on('click', function (e) {
         e.preventDefault();
-        alert("jeste");
         var link = $('#name').data("link");
         $.ajax({
             url: "/track/remove",
@@ -92,7 +88,7 @@ $(document).ready(function () {
                 window.location.href ="/tracks";
             },
             error: function (e) {
-                alert("dupa")
+                alert("Nie udało się usunąć trasy. Spróbuj ponownie.")
             }
         });
     })
