@@ -1,6 +1,4 @@
 $(document).ready(function () {
-    // setTimeout(startSet, 3000);
-
     $("#submit").click(function()  {
         $('.form').preventDefault();
         var name = $('#name').val();
@@ -37,7 +35,6 @@ $(document).ready(function () {
 
     $("#remove").on('click', function (e) {
         e.preventDefault();
-        alert("jeste");
         var link = $('#name').data("link");
         $.ajax({
             url: "/track/remove",
@@ -49,7 +46,7 @@ $(document).ready(function () {
                 }),
 
             success: function (data) {
-                alert("Udało ci się usunąć");
+                alert("Udało ci się usunąć trasę!");
                 window.location.href ="/tracks";
             },
             error: function (e) {
