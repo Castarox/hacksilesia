@@ -7,11 +7,11 @@ public class TrackForm {
     @NotNull
     private String name;
     @NotNull
-    private Double start_latitude;
+    private String start_latitude;
     @NotNull
     private Double start_longitude;
     @NotNull
-    private Double end_latitude;
+    private String end_latitude;
     @NotNull
     private Double end_longitude;
     @NotNull
@@ -30,11 +30,11 @@ public class TrackForm {
         this.name = name;
     }
 
-    public Double getStart_latitude() {
+    public String getStart_latitude() {
         return start_latitude;
     }
 
-    public void setStart_latitude(Double start_latitude) {
+    public void setStart_latitude(String start_latitude) {
         this.start_latitude = start_latitude;
     }
 
@@ -46,11 +46,11 @@ public class TrackForm {
         this.start_longitude = start_longitude;
     }
 
-    public Double getEnd_latitude() {
+    public String getEnd_latitude() {
         return end_latitude;
     }
 
-    public void setEnd_latitude(Double end_latitude) {
+    public void setEnd_latitude(String end_latitude) {
         this.end_latitude = end_latitude;
     }
 

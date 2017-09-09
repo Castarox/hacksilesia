@@ -27,9 +27,9 @@ public class TrackService {
 
     public Track createTrack(TrackForm trackForm) {
         String name = trackForm.getName();
-        Double start_latitude = trackForm.getStart_latitude();
+        String start_latitude = trackForm.getStart_latitude();
         Double start_longitude = trackForm.getStart_longitude();
-        Double end_latitude = trackForm.getEnd_latitude();
+        String end_latitude = trackForm.getEnd_latitude();
         Double end_longitude = trackForm.getStart_longitude();
         Integer space = trackForm.getSpace();
         String telephone = trackForm.getTelephone();
@@ -64,7 +64,7 @@ public class TrackService {
         track.setStartLatitude(trackForm.getStart_latitude());
         track.setStartLongitude(trackForm.getStart_longitude());
 
-        track.setEndLatitude(trackForm.getEnd_latitude());
+        track.setEndCity(trackForm.getEnd_latitude());
         track.setEndLongitude(trackForm.getEnd_longitude());
 
         track.setTelephone(trackForm.getTelephone());

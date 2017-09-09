@@ -11,10 +11,8 @@ public class Track {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    private Double startLatitude;
-    private Double startLongitude;
-    private Double endLatitude;
-    private Double endLongitude;
+    private String startCity;
+    private String endCity;
     private Integer space;
     private String telephone;
     private String time;
@@ -26,19 +24,15 @@ public class Track {
     }
 
     public Track(String name,
-                 Double startLatitude,
-                 Double startLongitude,
-                 Double endLatitude,
-                 Double endLongitude,
+                 String startCity,
+                 String endCity,
                  Integer space,
                  String telephone,
                  String time,
                  String other) {
         this.name = name;
-        this.startLatitude = startLatitude;
-        this.startLongitude = startLongitude;
-        this.endLatitude = endLatitude;
-        this.endLongitude = endLongitude;
+        this.startCity = startCity;
+        this.endCity = endCity;
         this.space = space;
         this.telephone = telephone;
         this.time = time;
@@ -69,36 +63,20 @@ public class Track {
         this.name = name;
     }
 
-    public Double getStartLatitude() {
-        return startLatitude;
+    public String getStartCity() {
+        return startCity;
     }
 
-    public void setStartLatitude(Double startLatitude) {
-        this.startLatitude = startLatitude;
+    public void setStartLatitude(String startCity) {
+        this.startCity = startCity;
     }
 
-    public Double getStartLongitude() {
-        return startLongitude;
+    public String getEndCity() {
+        return endCity;
     }
 
-    public void setStartLongitude(Double startLongitude) {
-        this.startLongitude = startLongitude;
-    }
-
-    public Double getEndLatitude() {
-        return endLatitude;
-    }
-
-    public void setEndLatitude(Double endLatitude) {
-        this.endLatitude = endLatitude;
-    }
-
-    public Double getEndLongitude() {
-        return endLongitude;
-    }
-
-    public void setEndLongitude(Double endLongitude) {
-        this.endLongitude = endLongitude;
+    public void setEndCity(String endCity) {
+        this.endCity = endCity;
     }
 
     public Integer getSpace() {
