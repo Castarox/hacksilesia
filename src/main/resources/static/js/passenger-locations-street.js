@@ -43,7 +43,7 @@ function setStartLatLon() {
             // var track_position = {lat: lat, lng: lng};
             var address = track['startCity'];
             var start_address = track['startCity'].replace(' ', '+');
-            var link = '/track/' +  track['id'];
+            var link = '/track/single/' +  track['id'];
             var time = track['time'];
             var url = "https://maps.googleapis.com/maps/api/geocode/json?address="+start_address + "&key=AIzaSyBAmG56Uzmyg04aMF30VHC0V_37n25DfDg";
             // var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lng + "&key=AIzaSyClhLo7xcQp1G13D7VSR65oekjtwj1Llsc";

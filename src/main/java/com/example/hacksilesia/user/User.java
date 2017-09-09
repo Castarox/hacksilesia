@@ -1,11 +1,9 @@
 package com.example.hacksilesia.user;
 
-import org.springframework.web.bind.annotation.SessionAttributes;
 
 import javax.persistence.*;
 
 @Entity
-@SessionAttributes("user")
 @Table(name="users")
 public class User {
     @Id
