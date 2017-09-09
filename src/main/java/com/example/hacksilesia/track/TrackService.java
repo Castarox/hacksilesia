@@ -18,7 +18,7 @@ public class TrackService {
         double minLatitude = latitude - distance;
         double maxLongitude = longitude + distance;
         double minLongitude = longitude - distance;
-        return trackRepository.findByStartLatitudeLessThanEqualAndStartLatitudeIsGreaterThanEqualAndStartLongitudeIsLessThanEqualAndStartLongitudeGreaterThanEqual(maxLatitude, minLatitude, maxLongitude, minLongitude);
+        return null;
     }
 
     public boolean isCorrectForm(Errors errors) {
@@ -27,20 +27,16 @@ public class TrackService {
 
     public Track createTrack(TrackForm trackForm) {
         String name = trackForm.getName();
-        String start_latitude = trackForm.getStart_latitude();
-        Double start_longitude = trackForm.getStart_longitude();
-        String end_latitude = trackForm.getEnd_latitude();
-        Double end_longitude = trackForm.getStart_longitude();
+        String startCity = trackForm.getStartCity();
+        String endCity = trackForm.getEndCity();
         Integer space = trackForm.getSpace();
         String telephone = trackForm.getTelephone();
         String time = trackForm.getTime();
         String other = trackForm.getOther();
         return trackRepository.save(new Track(
                 name,
-                start_latitude,
-                start_longitude,
-                end_latitude,
-                end_longitude,
+                startCity,
+                endCity,
                 space,
                 telephone,
                 time,
@@ -61,11 +57,8 @@ public class TrackService {
         track.setName(trackForm.getName());
         track.setSpace(trackForm.getSpace());
 
-        track.setStartLatitude(trackForm.getStart_latitude());
-        track.setStartLongitude(trackForm.getStart_longitude());
-
-        track.setEndCity(trackForm.getEnd_latitude());
-        track.setEndLongitude(trackForm.getEnd_longitude());
+        track.setStartCity(trackForm.getStartCity());
+        track.setEndCity(trackForm.getEndCity());
 
         track.setTelephone(trackForm.getTelephone());
         track.setSpace(trackForm.getSpace());
